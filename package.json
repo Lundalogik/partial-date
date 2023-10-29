@@ -1,0 +1,27 @@
+{
+  "name": "partial-date",
+  "version": "0.0.0",
+  "description": "A package for handling partial dates, like a date with no time, or a time with no date.",
+  "author": "Lime Technologies",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint \"**/*.{ts,tsx,js}\" --max-warnings=0",
+    "lint:fix": "eslint \"**/*.{ts,tsx,js}\" --fix --max-warnings=0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lundalogik/partial-date.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/Lundalogik/partial-date/issues"
+  },
+  "homepage": "https://github.com/Lundalogik/partial-date#readme",
+  "devDependencies": {
+    "@limetech/eslint-config": "^2.0.0",
+    "typescript": "^5.2.2"
+  }
+}
