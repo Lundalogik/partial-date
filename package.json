@@ -4,10 +4,16 @@
   "description": "A package for handling partial dates, like a date with no time, or a time with no date.",
   "author": "Lime Technologies",
   "license": "Apache-2.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "compile": "tsc --declaration",
     "lint": "eslint \"**/*.{ts,tsx,js}\" --max-warnings=0",
-    "lint:fix": "eslint \"**/*.{ts,tsx,js}\" --fix --max-warnings=0"
+    "lint:fix": "eslint \"**/*.{ts,tsx,js}\" --fix --max-warnings=0",
+    "prepublish": "npm run compile",
+    "test": "mocha",
+    "test:watch": "mocha --watch --parallel"
   },
   "repository": {
     "type": "git",
@@ -22,8 +28,10 @@
   "homepage": "https://github.com/Lundalogik/partial-date#readme",
   "devDependencies": {
     "@limetech/eslint-config": "^2.0.0",
+    "@types/mocha": "^10.0.4",
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
+    "ts-node": "^9.1.1",
     "typescript": "^5.2.2"
   }
 }
