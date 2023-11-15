@@ -8,10 +8,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "compile": "tsc --declaration",
+    "build": "tsc --declaration",
     "lint": "eslint \"**/*.{ts,tsx,js}\" --max-warnings=0",
     "lint:fix": "eslint \"**/*.{ts,tsx,js}\" --fix --max-warnings=0",
-    "prepublish": "npm run compile",
+    "prepublish": "npm run build",
     "test": "mocha",
     "test:watch": "mocha --watch --parallel"
   },
