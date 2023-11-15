@@ -1,6 +1,6 @@
 {
   "name": "@limetech/partial-date",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package for handling partial dates, like a date with no time, or a time with no date.",
   "author": "Lime Technologies",
   "license": "Apache-2.0",
