@@ -37,4 +37,10 @@ export class PartialDate {
 }
 
 // This really ought to be imported from lime-web-components, but lime-web-components isn't public yet.
-export type DateTimePropertyType = 'time' | 'date' | 'year' | 'quarter' | 'month' | 'week';
+export type DateTimePropertyType =
+    | 'time'
+    | 'date'
+    | 'year'
+    | 'quarter'
+    | 'month'
+    | 'week';

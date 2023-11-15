@@ -1,7 +1,7 @@
-import { expect }  from 'chai';
+import { expect } from 'chai';
 import { parse } from './parse';
 import { DateTimePropertyType } from './index';
-import timezone_mock from "timezone-mock";
+import timezone_mock from 'timezone-mock';
 import dayjs from 'dayjs';
 
 describe('parse', () => {
@@ -13,7 +13,7 @@ describe('parse', () => {
     });
 
     const values: {
-        [key in DateTimePropertyType]: { input: string, expectedJson: string };
+        [key in DateTimePropertyType]: { input: string; expectedJson: string };
     } = {
         date: { input: '2023-05-23', expectedJson: '2023-05-23T00:00:00.000Z' },
         time: { input: '17:44', expectedJson: '1970-01-01T17:44:00.000Z' },
