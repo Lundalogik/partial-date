@@ -28,9 +28,16 @@ export const parse = (
         const regex = /(\d{4})\s?Q?(\d)/;
         const match = value.match(regex);
         if (match) {
+            const monthsPerQuarter = 3;
+            const monthsToSubtractToGetFirstMonthOfQuarter = 2;
+            const monthsToSubtractToGetZeroIndexedMonth = 1;
+
             const year = +match[1];
             const quarter = +match[2];
-            const month = quarter * 3 - 2 - 1; // -2 because we want the first month of the quarter, -1 because month is 0-indexed.
+            const month =
+                quarter * monthsPerQuarter -
+                monthsToSubtractToGetFirstMonthOfQuarter -
+                monthsToSubtractToGetZeroIndexedMonth;
 
             return dayjs().year(year).month(month).startOf('month');
         } else {
