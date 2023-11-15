@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import dayjs from 'dayjs';
 import { PartialDate } from './index';
-import timezone_mock, { TimeZone } from 'timezone-mock';
+import timezoneMock, { TimeZone } from 'timezone-mock';
 
 const TIMEZONES: TimeZone[] = [
     'UTC',
@@ -29,10 +29,10 @@ describe('PartialDate', () => {
     describe('.toDate()', () => {
         context('in UTC timezone', () => {
             beforeEach(() => {
-                timezone_mock.register('UTC');
+                timezoneMock.register('UTC');
             });
             afterEach(() => {
-                timezone_mock.unregister();
+                timezoneMock.unregister();
             });
 
             context('with a date', () => {
@@ -189,11 +189,11 @@ describe('PartialDate', () => {
             let date: Date;
 
             beforeEach(() => {
-                timezone_mock.register('UTC');
+                timezoneMock.register('UTC');
                 date = new Date('2025-05-23T12:34:56.789Z');
             });
             afterEach(() => {
-                timezone_mock.unregister();
+                timezoneMock.unregister();
             });
 
             it('can extract the date', () => {
@@ -264,10 +264,10 @@ describe('PartialDate', () => {
                     };
 
                     beforeEach(() => {
-                        timezone_mock.register(timezone);
+                        timezoneMock.register(timezone);
                     });
                     afterEach(() => {
-                        timezone_mock.unregister();
+                        timezoneMock.unregister();
                     });
 
                     context('with a date', () => {
@@ -456,7 +456,7 @@ describe('PartialDate', () => {
                 let lateEdge: Date;
 
                 beforeEach(() => {
-                    timezone_mock.register(timezone);
+                    timezoneMock.register(timezone);
                     earlyEdge = new Date('2022-08-01 00:00:00.000');
                     lateEdge = new Date('2022-07-31 23:59:59.999');
 
@@ -469,7 +469,7 @@ describe('PartialDate', () => {
                     );
                 });
                 afterEach(() => {
-                    timezone_mock.unregister();
+                    timezoneMock.unregister();
                 });
 
                 context('with a date', () => {

@@ -1,15 +1,15 @@
 import { expect } from 'chai';
 import { parse } from './parse';
 import { DateTimePropertyType } from './index';
-import timezone_mock from 'timezone-mock';
+import timezoneMock from 'timezone-mock';
 import dayjs from 'dayjs';
 
 describe('parse', () => {
     before(() => {
-        timezone_mock.register('UTC');
+        timezoneMock.register('UTC');
     });
     after(() => {
-        timezone_mock.unregister();
+        timezoneMock.unregister();
     });
 
     const values: {
