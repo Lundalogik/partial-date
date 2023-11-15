@@ -10,7 +10,9 @@
     "skipLibCheck": true,
     "removeComments": false,
     "baseUrl": ".",
-    "importHelpers": true
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["**/node_modules", "**/dist"],
   "include": ["./src"]
